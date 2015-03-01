@@ -161,11 +161,11 @@ public class Main extends JFrame {
 			
 		setBounds(100, 100, 1000, 700);
 
-		JButton btnNewButton = new JButton("Eingaben speichern");
+		JButton allesSpeichernBtn = new JButton("Eingaben speichern");
 
-		JButton btnNewButton_1 = new JButton("Reserve 1");
+		JButton schuelerAuswahlMenueBtn = new JButton("Schüler auswählen");
 
-		JButton btnNewButton_2 = new JButton("Reserve 2");
+		JButton schuelerDatenblattAusdruckBtn = new JButton("Schülerdatenblatt ausdrucken");
 
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 
@@ -205,7 +205,7 @@ public class Main extends JFrame {
 				
 				AuswahlSchueler as = new AuswahlSchueler();
 				as.setVisible(true);
-			//	DatenSpeichernUndErsetzen.DateiInMatrix();//Vorbereitung fuer Speicherung von Datensaetzen
+			
 			}
 		});
 		
@@ -789,12 +789,13 @@ public class Main extends JFrame {
 		panelb.add(zweiteFremdsprache, "wrap");
 		zweiteFremdsprache.setName("zweiteFremdsprache");
 		divDaten[5] = zweiteFremdsprache;
+		
 
-		getContentPane().add(btnNewButton, "cell 0 1,alignx right,aligny top");
-	//	getContentPane().add(btnNewButton_1, "cell 2 1,alignx left,aligny top");
-	//	getContentPane().add(btnNewButton_2, "cell 3 1,alignx left,aligny top");
+		getContentPane().add(allesSpeichernBtn, "cell 3 1,alignx right,aligny top");
+		getContentPane().add(schuelerAuswahlMenueBtn, "cell 1 1,alignx left,aligny top");
+		//getContentPane().add(schuelerDatenblattAusdruckBtn, "cell 0 1,alignx left,aligny top");
 
-		btnNewButton.addActionListener(new ActionListener() {
+		allesSpeichernBtn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				int antwort = JOptionPane
@@ -816,18 +817,18 @@ public class Main extends JFrame {
 			}
 		});
 
-		btnNewButton_1.addActionListener(new ActionListener() {
+		schuelerAuswahlMenueBtn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				
-				
-			//	DBConnection.createTables();
-			//	GuiDatenInDB.werteInDB();
+				AuswahlSchueler as = new AuswahlSchueler();
+				as.setVisible(true);	
+			
 				
 			}
 		});
 
-		btnNewButton_2.addActionListener(new ActionListener() {
+		schuelerDatenblattAusdruckBtn.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 				

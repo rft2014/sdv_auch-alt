@@ -20,7 +20,7 @@ public class GuiDatenInDB {
 	}
 
 	public static void werteInDB() {
-	
+	final String auswahl = "";
 		/*
 		 * liest die Selektion der Radiobutton und wandelt in
 		 * DB konforme int var bool 1 oder 0 um 
@@ -100,7 +100,7 @@ public class GuiDatenInDB {
 						+ Main.divDaten[2].getName() + ", "
 						+ Main.divDaten[3].getName() + ", "
 						+ Main.divDaten[4].getName() + ", "
-						+ Main.divDaten[5].getName() +  ") VALUES ('"
+						+ Main.divDaten[5].getName() +  ",term) VALUES ('"
 						+ Main.persDaten[0].getText().replaceAll("[^a-zA-ZäöüÄÖÜßéèê-]", "") + "', '"
 						+ Main.persDaten[1].getText().replaceAll("[^a-zA-ZäöüÄÖÜßéèê-]", "") + "', '"
 						+ Main.persDaten[2].getText().replaceAll("[^a-zA-ZäöüÄÖÜßéèê-]", "") + "', '"
@@ -156,7 +156,65 @@ public class GuiDatenInDB {
 						+ Main.divDaten[2].getSelectedItem() + "', '"
 						+ Main.divDaten[3].getSelectedItem() + "', '"
 						+ Main.divDaten[4].getSelectedItem() + "', '"
-						+ Main.divDaten[5].getSelectedItem() + "');";
+						+ Main.divDaten[5].getSelectedItem() + "',1)" +
+								"ON DUPLICATE KEY UPDATE " +
+						" kvorname = '"+Main.kvorname.getText()+"', " +
+						" kbeiname = '"+Main.kbeiname.getText()+"', " +
+						" kname = '"+Main.kname.getText()+"', " +
+						" kgeburtstag = '"+Main.kgeburtstag.getText()+"', " +
+						" kgeburtsort = '"+Main.kgeburtsort.getText()+"', " +
+						" kreligion = '"+Main.kreligion.getText()+"', " +
+						" kstrasse = '"+Main.kstrasse.getText()+"', " +
+						" kplz = '"+Main.kplz.getText()+"', " +
+						" kwohnort = '"+Main.kwohnort.getText()+"', " +
+						" kOT = '"+Main.kOT.getText()+"', " +
+						" kstaat = '"+Main.kstaat.getText()+"', " +
+						" kkrankenkasse = '"+Main.kkrankenkasse.getText()+"', " +
+						" khausarzt = '"+Main.khausarzt.getText()+"', " +
+						" mname = '"+Main.mname.getText()+"', " +
+						" mvorname = '"+Main.mvorname.getText()+"', " +
+						" mstrasse = '"+Main.mstrasse.getText()+"', " +
+						" mplz = '"+Main.mplz.getText()+"', " +
+						" mwohnort = '"+Main.mwohnort.getText()+"', " +
+						" mtelpriv = '"+Main.mtelpriv.getText()+"', " +
+						" mteldienst = '"+Main.mteldienst.getText()+"', " +
+						" memail = '"+Main.memail.getText()+"', " +
+						" vname = '"+Main.vname.getText()+"', " +
+						" vvorname = '"+Main.vvorname.getText()+"', " +
+						" vstrasse = '"+Main.vstrasse.getText()+"', " +
+						" vplz = '"+Main.vplz.getText()+"', " +
+						" vwohnort = '"+Main.vwohnort.getText()+"', " +
+						" vtelpriv = '"+Main.vtelpriv.getText()+"', " +
+						" vteldienst = '"+Main.vteldienst.getText()+"', " +
+						" vemail = '"+Main.vemail.getText()+"', " +
+						" oname = '"+Main.oname.getText()+"', " +
+						" ovorname = '"+Main.ovorname.getText()+"', " +
+						" ostrasse = '"+Main.ostrasse.getText()+"', " +
+						" oplz = '"+Main.oplz.getText()+"', " +
+						" owohnort = '"+Main.owohnort.getText()+"', " +
+						" otel = '"+Main.otel.getText()+"', " +
+						" kstammschule = '"+Main.kstammschule.getText()+"', " +
+						" geschwistername = '"+Main.geschwistername.getText()+"', " +
+						" bemerkungen = '"+Main.bemerkungen.getText()+"', " +
+						" zugangsvoraussetzung = '"+Main.zugangsvoraussetzung.getSelectedItem()+"', " +
+						" sorgeberechtigung = '"+Main.sorgeberechtigung.getSelectedItem()+"', " +
+						" ausklasse = '"+Main.ausklasse.getSelectedItem()+"', " +
+						" inklasse = '"+Main.inklasse.getSelectedItem()+"', " +
+						" klasse = '"+Main.klasse.getSelectedItem()+"', " +
+						" zweiteFremdsprache = '"+Main.zweiteFremdsprache.getSelectedItem()+"', " +
+						" maennlich = '"+bool[0]+"', " +
+						" weiblich = '"+bool[1]+"', " +
+						" geschwister_ja = '"+bool[2]+"', " +
+						" geschwister_nein = '"+bool[3]+"', " +
+						" landkreis_ja = '"+bool[4]+"', " +
+						" landkreis_nein = '"+bool[5]+"', " +
+						" religion = '"+bool[6]+"', " +
+						" ethik = '"+bool[7]+"', " +
+						" oga_nein = '"+bool[8]+"', " +
+						" oga_ja = '"+bool[9]+"', " +
+						" doppel_ja = '"+bool[10]+"', " +
+						" doppel_nein = '"+bool[11]+"' " /*+
+								"WHERE uid = '"+auswahl+"';"*/;
 		
 				
 			//kein Eintrag ohne Nachnamen des Kindes

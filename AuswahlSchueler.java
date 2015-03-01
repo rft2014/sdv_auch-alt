@@ -23,6 +23,7 @@ import com.itextpdf.text.DocumentException;
 public class AuswahlSchueler extends JFrame {
 
 	private JPanel contentPane;
+	
 
 	/**
 	 * Erzeugt Auswahlfenster unter Datei > Schüler  um Datensätze auszuwählen
@@ -48,7 +49,7 @@ public class AuswahlSchueler extends JFrame {
 		contentPane.add(bearbeitenBtn, "flowy,cell 2 3");
 		
 		JButton aktualisierenBtn = new JButton("Datensatz aktualisieren");
-		contentPane.add(aktualisierenBtn, "cell 2 3");
+		//contentPane.add(aktualisierenBtn, "cell 2 3");
 		
 		JButton loeschBtn = new JButton("Datensatz löschen");
 		contentPane.add(loeschBtn, "cell 2 3");
@@ -111,6 +112,7 @@ loeschBtn.addActionListener(new ActionListener() {
 							,JOptionPane.ERROR_MESSAGE); 
 					}
 			}else{}
+			dispose();
 			}
 		});
 
@@ -136,7 +138,7 @@ datenblattAusdruck.addActionListener(new ActionListener() {
 		{
 		  exc.printStackTrace();
 		}
-		
+	dispose();
 		
 	}
 });
