@@ -326,7 +326,8 @@ public static void updateDB(String auswahl){
 						" oga_nein = '"+bool[8]+"', " +
 						" oga_ja = '"+bool[9]+"', " +
 						" doppel_ja = '"+bool[10]+"', " +
-						" doppel_nein = '"+bool[11]+"' " +
+						" doppel_nein = '"+bool[11]+"', " +
+						" term = 1 " +
 								"WHERE uid = '"+auswahl+"';";
 				if (Main.persDaten[2].getText().isEmpty()){JOptionPane.showMessageDialog(null,"Sie haben keinen Datensatz geöffnet.","Upps, eine Fehlermeldung!"
 						,JOptionPane.ERROR_MESSAGE); return;}

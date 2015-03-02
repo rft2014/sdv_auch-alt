@@ -159,7 +159,7 @@ public class Main extends JFrame {
         }
      );    
 			
-		setBounds(100, 100, 1000, 700);
+		setBounds(0, 0, 1000, 700);
 
 		JButton allesSpeichernBtn = new JButton("Eingaben speichern");
 
@@ -173,10 +173,10 @@ public class Main extends JFrame {
 		setJMenuBar(menuBar);
 
 		JMenu mnNewMenu = new JMenu("Schüler");
-		menuBar.add(mnNewMenu);
+		menuBar.add(mnNewMenu);// fuer Eltern abgeschaltet
 		
 		JMenu mnNewMenu_1 = new JMenu("Listen");
-		menuBar.add(mnNewMenu_1);
+		menuBar.add(mnNewMenu_1);//fuer Eltern abgeschaltet
 		
 		JMenuItem mntmNewMenuItem_11 = new JMenuItem("Klassenlisten");
 		mnNewMenu_1.add(mntmNewMenuItem_11);
@@ -792,7 +792,7 @@ public class Main extends JFrame {
 		
 
 		getContentPane().add(allesSpeichernBtn, "cell 3 1,alignx right,aligny top");
-		getContentPane().add(schuelerAuswahlMenueBtn, "cell 1 1,alignx left,aligny top");
+		getContentPane().add(schuelerAuswahlMenueBtn, "cell 1 1,alignx left,aligny top");//fuer Eltern abgeschaltet
 		//getContentPane().add(schuelerDatenblattAusdruckBtn, "cell 0 1,alignx left,aligny top");
 
 		allesSpeichernBtn.addActionListener(new ActionListener() {

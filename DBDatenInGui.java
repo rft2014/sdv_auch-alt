@@ -46,7 +46,12 @@ private static boolean zahl2bool(String x){
 
 			try {
 				Statement komplettAuslesen = DBConnection.con.createStatement();
+
 				String fuerAuswahlMenu = "Select uid,kname,kvorname FROM schuelerdaten WHERE term = '1' ORDER BY kname; ";
+
+
+
+
 				ResultSet rs = komplettAuslesen.executeQuery(fuerAuswahlMenu);
 				int rowcount = 0;
 				while (rs.next()) {
